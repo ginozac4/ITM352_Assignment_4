@@ -458,12 +458,12 @@ def osae_komi_tick():
     ok["seconds"] += 1
     player = ok["player"]
 
-    if ok["seconds"] == 10:
+    if ok["seconds"] == 5:
         apply_score(player, "yuko", 1)
-        record_action("+yuko", player, "Osae-komi 10s: yuko awarded")
-    elif ok["seconds"] == 15:
+        record_action("+yuko", player, "Osae-komi 5s: yuko awarded")
+    elif ok["seconds"] == 10:
         apply_score(player, "waza_ari", 1)
-        record_action("+waza_ari", player, "Osae-komi 15s: waza-ari awarded")
+        record_action("+waza_ari", player, "Osae-komi 10s: waza-ari awarded")
     elif ok["seconds"] >= 20:
         apply_score(player, "ippon", 1)
         record_action("+ippon", player, "Osae-komi 20s: ippon awarded")
