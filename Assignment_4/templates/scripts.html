@@ -302,21 +302,6 @@
   function stopInjury()     { post('/injury/stop'); }
   function resetInjury()    { post('/injury/reset'); }
 
-  // this runs every second automatically in the background
-  // checks which timers are active and advances them
-  // this is what makes the scoreboard feel live without refreshing
-  setInterval(async () => {
-    const stateRes = await fetch('/state');
-    const s = await stateRes.json();
-
-    if (s.status === 'active')  await fetch('/timer/tick',     { method: 'POST' });
-    if (s.osae_komi.active)     await fetch('/osae_komi/tick', { method: 'POST' });
-    if (s.injury.active)        await fetch('/injury/tick',    { method: 'POST' });
-
-    const updated = await fetch('/state');
-    updateDisplay(await updated.json());
-  }, 1000);
-
   // loads the current match state when the page first opens
   fetch('/state').then(r => r.json()).then(updateDisplay);
 </script>
