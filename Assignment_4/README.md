@@ -64,8 +64,8 @@ Because we had learned Python data structures, functions, Flask, and file I/O in
 | Click + on Ippon twice | Score stays at 1 (limit enforced) | ✅ Pass |
 | Click − on Yuko at 0 | Score stays at 0 (no negatives) | ✅ Pass |
 | Click + on Shido 3 times | Hansoku-make triggers automatically | ✅ Pass |
-| Start osae-komi, wait 10s | Yuko awarded automatically | ✅ Pass |
-| Start osae-komi, wait 15s | Waza-ari awarded automatically | ✅ Pass |
+| Start osae-komi, wait 5s | Yuko awarded automatically | ✅ Pass |
+| Start osae-komi, wait 10s | Waza-ari awarded automatically | ✅ Pass |
 | Start osae-komi, wait 20s | Ippon awarded, match ends | ✅ Pass |
 | Two waza-ari scored | Match ends automatically | ✅ Pass |
 | Timer reaches 0:00 | Winner declared by tiebreaker | ✅ Pass |
